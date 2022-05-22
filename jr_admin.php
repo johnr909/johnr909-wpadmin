@@ -1,8 +1,7 @@
 <?php
 /**
  * Plugin Name:     JR custom admin
- * Description:     WP Admin customizations for plugin management with Composer, the dashboard,
-                    footer, and login screen content.
+ * Description:     WP Admin customizations for plugin management with Composer, the dashboard, footer, and login screen content.
  * Author:          John Rose
  * Text Domain:     johnr909-wpadmin
  * Domain Path:     /languages
