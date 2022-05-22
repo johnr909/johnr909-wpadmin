@@ -23,21 +23,21 @@
   add_filter( 'plugin_action_links', 'remove_plugins_controls', 10, 4 );
 
   function disable_plugins_bulk_actions( $actions ) {
-    if( array_key_exists( 'deactivate-selected', $actions )) {
-      unset($actions['deactivate-selected']);
+    if( array_key_exists( 'deactivate-selected', $actions ) ) {
+      unset( $actions['deactivate-selected'] );
     }
 
 
-    if( array_key_exists( 'activate-selected', $actions )) {
-      unset($actions['activate-selected']);
+    if( array_key_exists( 'activate-selected', $actions ) ) {
+      unset( $actions['activate-selected'] );
     }
 
-    if( array_key_exists( 'delete-selected', $actions )) {
-      unset($actions['delete-selected']);
+    if( array_key_exists( 'delete-selected', $actions ) ) {
+      unset( $actions['delete-selected'] );
     }
 
-    if( array_key_exists( 'update-selected', $actions )) {
-      unset($actions['update-selected']);
+    if( array_key_exists( 'update-selected', $actions ) ) {
+      unset( $actions['update-selected'] );
     }
 
   }
