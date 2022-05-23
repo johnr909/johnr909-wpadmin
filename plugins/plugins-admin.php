@@ -1,7 +1,7 @@
 <?php
 
   function remove_plugins_controls( $actions, $plugin_file, $plugin_data, $context ) {
-    if( array_key_exists( 'edit', $action) ) {
+    if( array_key_exists( 'edit', $actions) ) {
       unset( $actions['edit'] );
     }
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:     JR custom admin
+ * Plugin Name:     johnr909-wpadmin
  * Description:     WP Admin customizations for plugin management with Composer, the dashboard, footer, and login screen content.
  * Author:          John Rose
  * Text Domain:     johnr909-wpadmin
@@ -19,8 +19,7 @@ function remove_dashboard_meta() {
 		remove_meta_box('dashboard_quick_press', 'dashboard','side');
 		remove_meta_box('dashboard_right_now', 'dashboard', 'normal');
 		remove_meta_box( 'dashboard_site_health', 'dashboard', 'normal' );
-		remove_meta_box( 'e-dashboard-overview', 'dashboard', 'normal');
-		remove_submenu_page( 'plugins.php', 'plugin-editor.php' );
+		remove_meta_box( 'e-dashboard-overview', 'dashboard', 'normal'); // if you're using Elementor
 	}
 
 }
@@ -37,18 +36,5 @@ function remove_footer_admin () {
 
 add_filter( 'admin_footer_text', 'remove_footer_admin' );
 
-?>
-
-
-<?php
-// need to determine which site and load images from spaces account
-function login_logo() { ?>
-	<style type="text/css">
-		body.login div#login h1 a {
-			background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/wolf.png);
-			padding-bottom: 30px;
-		}
-	</style>
-<?php }
-add_action( 'login_enqueue_scripts', 'login_logo' );
-
+$dir = plugin_dir_path( __DIR__ );
+require $dir . '/johnr909-wpadmin/plugins/plugins-admin.php';

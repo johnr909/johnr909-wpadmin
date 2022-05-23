@@ -1,0 +1,19 @@
+{
+    "name": "johnr909/johnr909-wpadmin",
+    "description": "WP Admin customizations for plugin management with Composer, the dashboard, footer, and login screen content.",
+    "type": "project",
+    "license": "GPL",
+    "autoload": {
+        "psr-4": {
+            "Johnr909\\Johnr909Wpadmin\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "John Rose",
+            "email": "johnr909@yahoo.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
