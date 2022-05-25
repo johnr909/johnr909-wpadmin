@@ -12,7 +12,7 @@
 
 // Your code starts here.
 function remove_dashboard_meta() {
-	if( current_user_can('manage_options')) {
+	if( current_user_can('edit_posts')) {
 		remove_meta_box('dashboard_welcome', 'dashboard', 'core');
 		remove_meta_box('dashboard_primary', 'dashboard', 'core');
 		remove_meta_box('dashboard_secondary', 'dashboard', 'core');
@@ -25,6 +25,15 @@ function remove_dashboard_meta() {
 }
 
 add_action( 'admin_init', 'remove_dashboard_meta');
+
+// hide the redis cache dashboard from non-admins
+function remove_dashboard_redis_cache() {
+	if( !current_user_can( 'manage_options' ) ) {
+		remove_meta_box( 'dashboard_rediscache', 'dashboard', 'normal' );
+	}
+}
+
+add_action( 'admin_init', 'remove_dashboard_redis_cache' );
 
 // off with the welcome panel too
 remove_action('welcome_panel', 'wp_welcome_panel');
