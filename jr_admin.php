@@ -109,7 +109,27 @@ function more_admin_styles() { ?>
   			color:  #fff;
   		}
 
+  		#wpbody .form-table th,
+  		#wpbody .form-wrap label {
+  			color: #fff;
+ 	 	}
 
+ 	 	#wpbody a {
+ 	 		color:  #fff;
+ 	 	}
+
+ 	 	#wpbody label {
+ 	 		color: #fff;
+ 	 	}
+
+ 	 	#wpbody p.description,
+ 	 	#wpbody .form-wrap p {
+			color: #fff;
+		}
+
+		#wpbody {
+			color:  #fff;
+		}
 	</style>
 <?php }
 
