@@ -20,6 +20,7 @@ function remove_dashboard_meta() {
 		remove_meta_box('dashboard_right_now', 'dashboard', 'normal');
 		remove_meta_box( 'dashboard_site_health', 'dashboard', 'normal' );
 		remove_meta_box( 'e-dashboard-overview', 'dashboard', 'normal'); // if you're using Elementor
+		remove_meta_box( 'beta_tester_dashboard_widget', 'dashboard', 'normal' );
 	}
 
 }
@@ -75,6 +76,33 @@ add_action( 'admin_head', 'style_tool_bar' );
 add_action( 'wp_head', 'style_tool_bar' );
 
 add_filter( 'admin_footer_text', 'remove_footer_admin' );
+
+
+function load_custom_admin_styles() {
+	$plugin_dir = plugins_url('admin-styles.css', __FILE__);
+	wp_enqueue_style( 'custom_wp_admin_css', $plugin_dir );
+}
+
+add_action( 'admin_enqueue_scripts', 'load_custom_admin_styles' );
+
+
+function more_admin_styles() { ?>
+	<style type="text/css">
+		body.wp-admin {
+			background: linear-gradient(to right, navy, purple);
+		}
+
+		#wpbody h1 {
+			color:  #fff;
+		}
+
+		#wpfooter p {
+			color:  #fff;
+		}
+	</style>
+<?php }
+
+add_action( 'admin_init', 'more_admin_styles' );
 
 $dir = plugin_dir_path( __DIR__ );
 require $dir . '/johnr909-wpadmin/plugins/plugins-admin.php';

@@ -51,5 +51,16 @@
     }
   }
 
-
   add_action( 'admin_init', 'remove_plugins_submenus' );
+
+
+  // function remove_themes_submenus() {
+  //   if( current_user_can( 'manage_options' ) ) {
+  //     remove_menu_page( 'theme-install.php' );
+  //   }
+  // }
+
+
+  // add_action( 'admin_menu', 'remove_themes_submenus', 999 );
+  //
+
