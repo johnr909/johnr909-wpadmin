@@ -39,7 +39,7 @@ function add_box() {
  	if( current_user_can( 'manage_options' ) ) {
    		add_meta_box(
          'dashboard_widget_id',
-         esc_html__( 'Composer managed site', 'wporg' ),
+         esc_html__( 'Composer Managed Site', 'johnr909-wpadmin' ),
          'custom_dashboard',
          'dashboard',
          'side', 'high'
@@ -49,7 +49,8 @@ function add_box() {
 
 function custom_dashboard() {
   echo "<p>This site and it's plugins and themes are managed with Composer so just keep that in mind, right?</p>";
-  echo "<img src='https://getcomposer.org/img/logo-composer-transparent.png' width='145' height='178'>";
+  echo "<img style='float: right;' src='https://getcomposer.org/img/logo-composer-transparent.png' width='145' height='178'>";
+  echo "<br style='clear: right;'>";
 }
 
 add_action( 'admin_init', 'add_box' );
@@ -61,6 +62,17 @@ remove_action('welcome_panel', 'wp_welcome_panel');
 function remove_footer_admin () {
 	echo '<p>Built by johnr909</p>';
 }
+
+function style_tool_bar() {
+    echo '
+    <style type="text/css">
+	#wpadminbar {
+		background: linear-gradient(to right, navy, purple);
+	}
+    </style>';
+}
+add_action( 'admin_head', 'style_tool_bar' );
+add_action( 'wp_head', 'style_tool_bar' );
 
 add_filter( 'admin_footer_text', 'remove_footer_admin' );
 
