@@ -99,6 +99,17 @@ function more_admin_styles() { ?>
 		#wpfooter p {
 			color:  #fff;
 		}
+
+		#wpbody .subsubsub li a {
+			color:  #fff !important;
+		}
+
+		#wpbody .subsubsub a .count,
+		#wpbody .subsubsub a.current .count {
+  			color:  #fff;
+  		}
+
+
 	</style>
 <?php }
 
