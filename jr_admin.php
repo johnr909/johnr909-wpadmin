@@ -35,6 +35,25 @@ function remove_dashboard_redis_cache() {
 
 add_action( 'admin_init', 'remove_dashboard_redis_cache' );
 
+function add_box() {
+ 	if( current_user_can( 'manage_options' ) ) {
+   		add_meta_box(
+         'dashboard_widget_id',
+         esc_html__( 'Composer managed site', 'wporg' ),
+         'custom_dashboard',
+         'dashboard',
+         'side', 'high'
+   		);
+    }
+}
+
+function custom_dashboard() {
+  echo "<p>This site and it's plugins and themes are managed with Composer so just keep that in mind, right?</p>";
+  echo "<img src='https://getcomposer.org/img/logo-composer-transparent.png' width='145' height='178'>";
+}
+
+add_action( 'admin_init', 'add_box' );
+
 // off with the welcome panel too
 remove_action('welcome_panel', 'wp_welcome_panel');
 
