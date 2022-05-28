@@ -114,21 +114,43 @@ function more_admin_styles() { ?>
   			color: #fff;
  	 	}
 
- 	 	#wpbody a {
+ 	 	/*#wpbody a {
  	 		color:  #fff;
- 	 	}
+ 	 	}*/
 
  	 	#wpbody label {
  	 		color: #fff;
  	 	}
 
  	 	#wpbody p.description,
- 	 	#wpbody .form-wrap p {
+ 	 	#wpbody .form-wrap p,
+ 	 	#wpbody p,
+ 	 	#wpbody h2,
+ 	 	#wpbody h3 {
 			color: #fff;
 		}
 
-		#wpbody {
+		/*#wpbody {
 			color:  #fff;
+		}*/
+
+		.nav-tab-active, .nav-tab-active:hover, .nav-tab-active:focus, .nav-tab-active:focus:active {
+			 background: transparent;
+		}
+
+		#wpbody .notice p,
+		#wpbody .notice-warning p,
+		#wpbody .card h2.title,
+		#wpbody .card p {
+			color: #000;
+		}
+
+		#rediscache h6 {
+			color:  #fff;
+		}
+
+		#update-plugins-table p {
+			color:  #000;
 		}
 	</style>
 <?php }
