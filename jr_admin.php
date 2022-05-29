@@ -79,83 +79,11 @@ add_filter( 'admin_footer_text', 'remove_footer_admin' );
 
 
 function load_custom_admin_styles() {
-	$plugin_dir = plugins_url('admin-styles.css', __FILE__);
+	$plugin_dir = plugins_url('admin-style.css', __FILE__);
 	wp_enqueue_style( 'custom_wp_admin_css', $plugin_dir );
 }
 
 add_action( 'admin_enqueue_scripts', 'load_custom_admin_styles' );
-
-
-function more_admin_styles() { ?>
-	<style type="text/css">
-		body.wp-admin {
-			background: linear-gradient(to right, navy, purple);
-		}
-
-		#wpbody h1 {
-			color:  #fff;
-		}
-
-		#wpfooter p {
-			color:  #fff;
-		}
-
-		#wpbody .subsubsub li a {
-			color:  #fff !important;
-		}
-
-		#wpbody .subsubsub a .count,
-		#wpbody .subsubsub a.current .count {
-  			color:  #fff;
-  		}
-
-  		#wpbody .form-table th,
-  		#wpbody .form-wrap label {
-  			color: #fff;
- 	 	}
-
- 	 	/*#wpbody a {
- 	 		color:  #fff;
- 	 	}*/
-
- 	 	#wpbody label {
- 	 		color: #fff;
- 	 	}
-
- 	 	#wpbody p.description,
- 	 	#wpbody .form-wrap p,
- 	 	#wpbody p,
- 	 	#wpbody h2,
- 	 	#wpbody h3 {
-			color: #fff;
-		}
-
-		/*#wpbody {
-			color:  #fff;
-		}*/
-
-		.nav-tab-active, .nav-tab-active:hover, .nav-tab-active:focus, .nav-tab-active:focus:active {
-			 background: transparent;
-		}
-
-		#wpbody .notice p,
-		#wpbody .notice-warning p,
-		#wpbody .card h2.title,
-		#wpbody .card p {
-			color: #000;
-		}
-
-		#rediscache h6 {
-			color:  #fff;
-		}
-
-		#update-plugins-table p {
-			color:  #000;
-		}
-	</style>
-<?php }
-
-add_action( 'admin_init', 'more_admin_styles' );
 
 $dir = plugin_dir_path( __DIR__ );
 require $dir . '/johnr909-wpadmin/plugins/plugins-admin.php';

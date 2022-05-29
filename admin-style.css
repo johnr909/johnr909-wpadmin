@@ -1,4 +1,153 @@
-body {
-	background-color: green;
-
+body.wp-admin {
+	background: linear-gradient(to right, navy, purple);
+	color:  #fff;
 }
+
+#wpbody h1,
+#wpbody h2 {
+	color:  #fff;
+}
+
+#wpfooter p {
+	color:  #fff;
+}
+
+#wpbody .subsubsub li a {
+	color:  #fff !important;
+}
+
+#wpbody .subsubsub a .count,
+#wpbody .subsubsub a.current .count {
+	color:  #fff;
+}
+
+#wpbody .form-table th,
+#wpbody .form-wrap label {
+	color: #fff;
+}
+
+#wpbody a {
+	color:  magenta;
+}
+
+#wpbody a[role="button"] {
+	background:  navy;
+}
+
+.wrap .add-new-h2,
+.wrap .add-new-h2:active,
+.wrap .page-title-action,
+.wrap .page-title-action:active {
+	border: 1px solid magenta;
+	color:  magenta;
+	background: navy;
+	cursor: pointer;
+}
+
+#wpbody p.description,
+#wpbody .form-wrap p {
+	color: #fff;
+}
+
+#wpbody h2.title {
+	color:  #fff;
+}
+
+.nav-tab-active, .nav-tab-active:hover,
+.nav-tab-active:focus,
+.nav-tab-active:focus:active {
+	background: transparent;
+}
+
+#wpbody .notice p,
+#wpbody .notice-warning p,
+#wpbody .card h2.title,
+#wpbody .card p {
+	color: #000;
+}
+
+#wpbody #nav-menu-footer a.menu-delete {
+	color:  magenta;
+}
+
+.form-table {
+	color:  #fff;
+}
+
+.form-table lable {
+	color:  #000;
+}
+
+form[name="form"] p {
+color:  #fff;
+}
+
+input[type="checkbox"], input[type="radio"] {
+	border: 1px solid magenta;
+}
+
+#rediscache h2,
+#rediscache h6 {
+	color:  #fff;
+}
+
+#rediscache .form-table .success {
+	color:  magenta;
+}
+
+#update-plugins-table p {
+color:  #000;
+}
+
+#plupload-upload-ui {
+	color:  #fff;
+}
+
+.max-upload-size {
+	color:  #fff;
+}
+
+.wrap h2.rt_option_title {
+	color:  #fff;
+}
+
+.rt-nginx-wrapper h4 {
+	color:  black;
+}
+
+#profile-page h2 {
+	color:  #fff;
+}
+
+#ajax-response + p {
+	color:  #fff;
+}
+
+#wpbody a.button-primary,
+a.button-primary {
+	background: navy !important;
+	opacity: .7 !important;
+}
+
+.fp-field-container .__fakerpress p.fp-field-description {
+	color:  #fff;
+}
+
+.metabox-prefs {
+	color:  #000;
+}
+
+#wpbody .health-check-header,
+#wpbody .health-check-header h1 {
+	color:  #000;
+}
+
+.ep-features {
+	color:  #000;
+}
+
+.ep-feature .postbox .hndle .settings-button {
+	background-color: navy;
+}
+
+
