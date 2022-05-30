@@ -1,6 +1,6 @@
 body.wp-admin {
 	background: linear-gradient(to right, navy, purple);
-	color:  #fff;
+	/*color:  #fff;*/
 }
 
 #wpbody h1,
@@ -92,7 +92,24 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 #rediscache .form-table .success {
-	color:  magenta;
+	color:  magenta !important;
+}
+
+#rediscache .compatibility {
+	color: #fff !important;
+}
+
+.application-passwords p {
+	color:  #fff;
+}
+
+#wpbody .privacy-settings-title-section h1,
+#wpbody .privacy-settings-title-section p {
+	color:  #000;
+}
+
+#wpbody .privacy-settings-body {
+	color:  #fff !important;
 }
 
 #update-plugins-table p {
@@ -133,6 +150,10 @@ a.button-primary {
 	color:  #fff;
 }
 
+.__fakerpress .fp-field-description {
+	 color: #fff !important;
+}
+
 .metabox-prefs {
 	color:  #000;
 }
@@ -150,4 +171,76 @@ a.button-primary {
 	background-color: navy;
 }
 
+#dashboard-widgets h2,
+#dashboard-widgets p {
+	color:  #000;
+}
+
+p.update-last-checked,
+p.auto-update-status {
+	color:  #fff;
+}
+
+#wpbody .wp-core-ui .button,
+#wpbody .wp-core-ui .button-secondary {
+  color: #fff;
+  background: linear-gradient(to right, navy, purple);
+  border-color: navy;
+}
+
+#wpbody .wp-core-ui .button-primary {
+  background: linear-gradient(to right, navy, purple);
+  border-color: navy !important;
+  color: magenta;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+.wp-core-ui .button-primary.active,
+.wp-core-ui .button-primary.active:hover,
+.wp-core-ui .button-primary.active:focus,
+.wp-core-ui .button-primary:active {
+    background: green;
+    border-color: green;
+    box-shadow: none;
+    color: #fff;
+}
+
+.wp-core-ui .button-primary.hover,
+.wp-core-ui .button-primary:hover,
+.wp-core-ui .button-primary.focus,
+.wp-core-ui .button-primary:focus {
+  background: magenta;
+  border-color: magenta;
+  color: #fff;
+}
+
+.wp-core-ui .button-primary.focus,
+.wp-core-ui .button-primary:focus {
+  box-shadow:
+    0 0 0 1px #fff,
+    0 0 0 3px #2271b1;
+}
+
+.wp-core-ui .button-primary.active,
+.wp-core-ui .button-primary.active:hover,
+.wp-core-ui .button-primary.active:focus,
+.wp-core-ui .button-primary:active {
+  background: magenta;
+  border-color: magenta;
+  box-shadow: none;
+  color: #fff;
+}
+
+.wp-core-ui .button-primary[disabled],
+.wp-core-ui .button-primary:disabled,
+.wp-core-ui .button-primary-disabled,
+.wp-core-ui .button-primary.disabled {
+  color: #a7aaad !important;
+  background: #f6f7f7 !important;
+  border-color: #dcdcde !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  cursor: default;
+}
 
